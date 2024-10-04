@@ -1,0 +1,71 @@
+.form-signin .form-floating {
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.form-signin .form-control {
+    background-color: transparent; /* Transparent background */
+    color: white;                  /* White text */
+    border: 1px solid white;        /* White border */
+}
+
+.form-signin .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* White placeholder text with transparency */
+}
+
+.form-signin .form-control:focus {
+    background-color: transparent; /* Keep transparent on focus */
+    color: white;                  /* Keep white text on focus */
+    border-color: white;           /* White border on focus */
+    outline: none;                 /* Remove default focus outline */
+    box-shadow: none;              /* Remove shadow */
+}
+
+.form-signin label {
+    color: white;                  /* White label text */
+}
+
+.form-check-input {
+    background-color: transparent; /* Transparent checkbox */
+    border-color: white;           /* White border */
+}
+
+.form-check-label {
+    color: white;                  /* White checkbox label text */
+}
+
+.btn-signin {
+    background-color: transparent;   
+    color: white;                 
+}
+
+label {
+    color: grey;                   /* Grey label text */
+}
+
+.btn-register {
+    background-color: transparent;   
+    color: white;                 
+    padding: 12px 20px;
+    margin-bottom: 8%;
+}
+
+.btn-register:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+    color: white;
+}
+
+.btn-signin:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+    color: white;
+}
+
+/* Text at the bottom of the form */
+.text-body-secondary {
+    color: rgba(255, 255, 255, 0.6); /* Slightly lighter text */
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+
+

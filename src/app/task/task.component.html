@@ -1,0 +1,103 @@
+<div class="container mt-4">
+  <div class="row">
+    <!-- Add New Task Button -->
+    <div class="col-md-6 text-center">
+      <button class="btn btn-outline-primary btn-lg w-75 d-flex align-items-center justify-content-center" (click)="toggleNewTask()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="me-2" width="24" height="24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        Add New Task
+      </button>
+    </div>
+
+    <!-- View All Tasks Button -->
+    <div class="col-md-6 text-center">
+      <button class="btn btn-outline-primary btn-lg w-75 d-flex align-items-center justify-content-center" (click)="toggleViewAllTasks()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="me-2" width="24" height="24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        Show All Tasks
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Add New Task Form (Initially hidden) -->
+<div *ngIf="showNewTask" class="container my-4 d-flex justify-content-center">
+  <form #taskForm="ngForm" style="width: 26rem;" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+      <label for="taskTitle" class="form-label">Task Title</label>
+      <input class="form-control" id="taskTitle" placeholder="Task 1..." [(ngModel)]="newTask.Title" name="title" required>
+    </div>
+    <div class="mb-3">
+      <label for="taskDescription" class="form-label">Description</label>
+      <textarea class="form-control" id="taskDescription" rows="3" [(ngModel)]="newTask.Description" name="description" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="taskDueDate" class="form-label">Due Date</label>
+      <input type="date" class="form-control" id="taskDueDate" [(ngModel)]="newTask.DueDate" name="dueDate" required>
+    </div>
+    <div class="mb-3">
+      <label for="taskPriority" class="form-label">Priority</label>
+      <select class="form-control" [(ngModel)]="newTask.Priority" name="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+    <input class="btn btn-outline-primary" type="submit" value="Create New Task" [disabled]="!taskForm.valid">
+  </form>
+</div>
+
+<!-- View All Tasks Table (Initially hidden) -->
+<section *ngIf="showAllTasks">
+  <div *ngIf="tasks.length > 0" class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-12 col-xl-10">
+        <div class="card mask-custom">
+          <div class="card-body p-4 text-white">
+            <div class="text-center pt-3 pb-2">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-todo-list/check1.webp" alt="Check" width="60">
+              <h2 class="my-4">Task List</h2>
+            </div>
+
+            <!-- Task List Table -->
+            <table class="table text-black mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Task ID</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let task of tasks" class="fw-normal">
+                  <td>{{ task.taskId }}</td>
+                  <td>{{ task.title }}</td>
+                  <td>{{ task.description }}</td>
+                  <td class="align-middle">
+                    <select class="form-control" [(ngModel)]="task.status" (change)="updateTaskStatus(task.taskId, task.status)">
+                      <option value="Planned">Planned</option>
+                      <option value="In Progress">In Progress</option>
+                      <option value="Testing">Testing</option>
+                      <option value="Completed">Completed</option>
+                    </select>
+                  </td>
+                  <td class="align-middle">
+                    <button class="btn btn-danger btn-sm" (click)="deleteTask(task.taskId)">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- No tasks message -->
+            <p *ngIf="tasks.length === 0" class="text-center">No tasks available.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

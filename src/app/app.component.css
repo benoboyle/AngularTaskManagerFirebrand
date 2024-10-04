@@ -1,0 +1,76 @@
+/* Custom styles for the navbar */
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lilita+One&family=Lumanosimo&family=Paytone+One&display=swap');
+.custom-navbar {
+    background-color:transparent; /* Transparent background with some darkness */
+    font-family: "DM Sans", sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    border-bottom: none; /* Optional subtle border */
+    padding: 10px 20px;
+  }
+
+  body{
+    font-family: "Caprasimo", serif;
+  }
+  
+  .custom-navbar .navbar-brand, 
+  .custom-navbar .nav-link {
+    color: white;
+    font-weight: normal;
+    font-family: "DM Sans", sans-serif;
+  }
+
+  .navbar-brand {
+    font-size: xx-large;
+  }
+  
+  /* Hover effect for links */
+  .custom-navbar .nav-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+ 
+  .btn-outline-primary {
+    color: #fff;
+    background-color: transparent ;
+    border-color: white;
+  }
+
+  .btn-outline-primary-signin {
+    color: #fff;
+    background-color: transparent ;
+    border-color: white;
+  }
+
+  .btn-outline-primary-signin:hover {
+    color: #fff;
+    background-color: #f92c85;
+    border-color: #f92c85;
+  }
+
+
+  
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #f92c85;
+    border-color: #f92c85;
+  }
+  
+  /* Adjustments for mobile view (navbar-toggler) */
+  .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3E%3C/path%3E%3C/svg%3E");
+  }
+  
+  /* Ensure container takes full width on large screens */
+  .container-fluid {
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  

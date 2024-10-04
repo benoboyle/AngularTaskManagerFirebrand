@@ -1,0 +1,70 @@
+/* Container styling */
+.container {
+    margin-top: 20px;
+}
+
+/* Form title */
+h1 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Style for form fields */
+.form-floating {
+    position: relative;
+    margin-bottom: 1.5rem; /* Space between fields */
+}
+
+.form-control {
+    background-color: transparent; /* Transparent background */
+    color: white;                  /* White text */
+    border: 1px solid white;        /* White border */
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* White placeholder text with transparency */
+}
+
+.form-control:focus {
+    background-color: transparent; /* Keep transparent on focus */
+    color: white;                  /* Keep white text on focus */
+    border-color: white;           /* White border on focus */
+    outline: none;                 /* Remove default focus outline */
+    box-shadow: none;              /* Remove shadow */
+}
+
+/* Label styling */
+label {
+    color: grey;                   /* Grey label text */
+}
+
+/* Button styling */
+.btn-outline-primary {
+    background-color: transparent;  /* Transparent background */
+    color: white;                   /* White button text */
+    border: transparent;        /* White border */
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+    color: white;
+}
+
+/* SVG icon next to the button text */
+.btn-outline-primary svg {
+    margin-left: 10px; /* Space between text and icon */
+}
+
+/* Text at the bottom of the form */
+.text-body-secondary {
+    color: rgba(255, 255, 255, 0.6); /* Slightly lighter text */
+    text-align: left;
+    font-size: 0.9rem;
+}

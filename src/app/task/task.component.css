@@ -1,0 +1,115 @@
+/* General styling for the Task Component */
+.container {
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the large buttons (Add New Task, Show All Tasks) */
+  .btn-lg {
+    padding: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the form */
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .btn-outline-primary {
+    color: #fff;
+    background-color: transparent ;
+    border-color: white;
+    padding: 10px 20px;
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #f92c85;
+    border-color: #f92c85;
+  }
+  
+  /* Style for the task list table */
+  .table {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+  }
+  
+  .table th {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: #e9ecef;
+  }
+  
+  /* Style for the card */
+  .card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  /* Adjust the status dropdown */
+  .form-control {
+    width: 100%;
+  }
+  
+  /* Table text */
+  .text-center {
+    color: white;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .gradient-custom-2 {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  }
+  
+  hr {
+    border-color: #dee2e6;
+  }
+  
+  /* Padding adjustments */
+  .pt-3 {
+    padding-top: 1rem !important;
+  }
+  
+  .pb-2 {
+    padding-bottom: 0.5rem !important;
+  }
+  
